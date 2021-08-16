@@ -29,7 +29,7 @@ docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --c
 You can build and run with one command in the terminal, before this, make sure you've followed all the steps from `create your config file`:
 
 ```
-docker build https://github.com/bazarnov/linkedin-token-generator.git#main --no-cache -t linkedin-token-generator \
+docker build https://github.com/bazarnov/linkedin-token-generator.git#main -t linkedin-token-generator \
     && docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --config /secrets/config.json
 ```
 
