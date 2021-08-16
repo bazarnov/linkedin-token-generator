@@ -31,7 +31,7 @@ You can build and run with one command in the terminal, before this, make sure y
 ```
 docker build https://github.com/bazarnov/linkedin-token-generator.git#main --no-cache -t linkedin-token-generator \
     && docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --config /secrets/config.json
-
+```
 
 ### Typical Output
 You should now has the similar output to this:
