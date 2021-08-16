@@ -36,7 +36,7 @@ docker build https://github.com/bazarnov/linkedin-token-generator.git#main -t li
 ### Typical Output
 You should now has the similar output to this:
 ```
-{'scopes': ['r_emailaddress', 'r_liteprofile'], 'access_token': 'AQVzJ8Ju_----------------------wktfmApjamOTjlfo4Mv-L2hTBgLvcL_FuQ', 'expires_in': 5183999}
+{'scopes': ['r_emailaddress', 'r_liteprofile'], 'access_token': 'AQVzJ8Ju_----------------------L2hTBgLvcL_FuQ', 'expires_in': 5183999}
 ```
 ### Using the Output
 Now you should be able to use your `'access_token'` value for making authenticated requests to LinkedIn Ads/Marketing API.
