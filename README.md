@@ -15,11 +15,12 @@ docker build . --no-cache -t linkedin-token-generator
 4. Put the newly created `config.json` into the `secrets` folder from `step 2`.
 
 ### Run
-1. Open `/linkedin_token_generator` folder. use the following command in Terminal to run the docker container:
-    ```
-    docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --config /secrets/config.json
-    ```
+Open `/linkedin_token_generator` folder. use the following command in Terminal to run the docker container:
 
+```
+docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --config /secrets/config.json
+```
+### Typical Output
 You should now has the similar output to this:
 ```
 {'scopes': ['r_emailaddress', 'r_liteprofile'], 'access_token': 'AQVzJ8Ju_----------------------wktfmApjamOTjlfo4Mv-L2hTBgLvcL_FuQ', 'expires_in': 5183999}
