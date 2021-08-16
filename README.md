@@ -3,9 +3,13 @@
 2. Open the folder with cloned project and follow the `Build` instructions.
 
 ### Build
-Build the latest Docker image:
+Build the latest Docker image from local folder:
 ```
 docker build . --no-cache -t linkedin-token-generator
+```
+Build the latest Docker using github link directly:
+```
+docker build https://github.com/bazarnov/linkedin-token-generator.git#main --no-cache -t linkedin-token-generator
 ```
 
 ### Create your config file
@@ -20,6 +24,15 @@ Open `/linkedin_token_generator` folder. use the following command in Terminal t
 ```
 docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --config /secrets/config.json
 ```
+
+### Build and Run
+You can build and run with one command in the terminal, before this, make sure you've followed all the steps from `create your config file`:
+
+```
+docker build https://github.com/bazarnov/linkedin-token-generator.git#main --no-cache -t linkedin-token-generator \
+    && docker run --rm -v $(pwd)/secrets:/secrets linkedin-token-generator generate --config /secrets/config.json
+
+
 ### Typical Output
 You should now has the similar output to this:
 ```
