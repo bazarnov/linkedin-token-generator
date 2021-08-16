@@ -1,0 +1,23 @@
+.gradle
+.idea
+*.iml
+build
+out
+.DS_Store
+data
+.dockerversions
+.classpath
+.project
+.settings
+
+# Secrets
+secrets
+
+# Python
+*.egg-info
+__pycache__
+.eggs
+.venv
+.mypy_cache
+.ipynb_checkpoints
+.pytest_

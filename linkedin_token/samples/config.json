@@ -1,0 +1,8 @@
+{
+    "user_email": "example@email.com",
+    "user_password": "password_to_your_linkedin_account",
+    "client_id": "Developer_App_CLIENT_ID",
+    "client_secret": "Developer_App_CLIENT_SECRET",
+    "redirect_uri": "Developer_App_REDIRECTION_URI",
+    "scopes": ["r_emailaddress", "r_liteprofile", "r_ads", "r_ads_reporting", "r_organization_social"]
+}
