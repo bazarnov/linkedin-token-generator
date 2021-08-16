@@ -25,7 +25,7 @@ You should now has the similar output to this:
 ```
 {'scopes': ['r_emailaddress', 'r_liteprofile'], 'access_token': 'AQVzJ8Ju_----------------------wktfmApjamOTjlfo4Mv-L2hTBgLvcL_FuQ', 'expires_in': 5183999}
 ```
-### Use the `access_token`
+### Using the Output
 Now you should be able to use your `'access_token'` value for making authenticated requests to LinkedIn Ads/Marketing API.
 More information: [HERE](https://docs.microsoft.com/en-us/linkedin/marketing/getting-started)
 
