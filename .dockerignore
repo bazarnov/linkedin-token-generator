@@ -1,6 +1,4 @@
 *
-!Dockerfile
-!Dockerfile.test
 !main.py
 !linkedin_token
 !setup.py
