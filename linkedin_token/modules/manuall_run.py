@@ -16,6 +16,6 @@ token = instance.get_access_token(config)
 print(token)
 
 # ATTEMPT 2 - use  the AUTH_CODE provided inside the redirect_uri link to get the access_token
-code = "AQQXTV5lCZlRHJi16nmTCwv752zxco2LY2GvGi4LWyAWh3jHwLTWqcvq16A2F2eebC7ERnHnZeRnhmeZ1unkPBUc7Cnn0McsLjpz-61QoSB8xyobmGhI1fDxYOIk6V1wYu1v6FLGS_ZA86prLEdC_VTX7Uf16K-s5xQXFNo9tRLWYF-RRbthh2cMk1D0cmD64fmjMiDLFbXXI7FAwfc"
+code = "YOUR_AUTH_CODE_HERE"
 token = instance.get_access_token(config, code)
 print(token)
