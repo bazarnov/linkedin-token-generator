@@ -12,6 +12,7 @@ data
 
 # Secrets
 secrets
+.secrets
 
 # Python
 *.egg-info

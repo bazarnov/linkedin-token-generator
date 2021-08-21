@@ -63,7 +63,9 @@ class Entrypoint(object):
 def read_config(config_path: str) -> Mapping[str, Any]:
     with open(config_path, "r") as file:
         contents = file.read()
+    config = json.loads(contents)
     return json.loads(contents)
+    
 
 def launch(source: LinkedInAuth, args: List[str]):
     print(Entrypoint(source).run(Entrypoint(source).parse_args(args)))

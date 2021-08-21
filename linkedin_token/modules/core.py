@@ -60,8 +60,6 @@ class LinkedInAuth(object):
                 'trk': 'guest_homepage-basic_sign-in-submit'
             }
             session.post(login_url, data=login_info)
-            session_id = str(session.cookies.get("JSESSIONID"))
-            # print(f"Logged in, Session: {session_id}")
             return session
         except requests.exceptions.HTTPError as e:
             raise Error(e, "Error occured while Logging In")
@@ -76,7 +74,6 @@ class LinkedInAuth(object):
             "trk": "nav_account_sub_nav_signout"
         }
         try:
-            #print(f"Closing Session: {session_id}")
             response = session.get(sign_out_url, params=params)
             if response.status_code == 200:
                 session.close()
@@ -95,11 +92,9 @@ class LinkedInAuth(object):
         # Make login session
         session = self.login(config)
         # Get auth_code
-        #print("Obtaining Auth Code...")
         auth_code_url = session.get(auth_code_url, params=params)
         auth_code = dict(parse_qsl(urlparse(auth_code_url.url).query)).get("code")
         if auth_code:
-            #print("Done.")
             # Closing the session
             self.sign_out(session)
             return auth_code
@@ -118,7 +113,6 @@ class LinkedInAuth(object):
             "redirect_uri": config["redirect_uri"],
         }
         try:
-            #print("Exchanging Auth Code for Access Token...")
             responce = requests.post(auth_url, data=payload)
             responce.raise_for_status()
             token = responce.json()
@@ -128,7 +122,6 @@ class LinkedInAuth(object):
                     "access_token": token.get("access_token"),
                     "expires_in": token.get("expires_in")
                 }
-                #print("Done.")
                 return result
         except requests.exceptions.HTTPError as e:
             raise Error(e, "Error occured while exchanging Auth Code for Access Token")

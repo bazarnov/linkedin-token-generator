@@ -31,8 +31,8 @@ MAIN_REQUIREMENTS = [
 setup(
     name="linkedin_token_generator",
     description="LinkedIn Access Token Generator for Ads/Marketing API",
-    author="Airbyte",
-    author_email="contact@airbyte.io",
+    author="Oleksandr Bazarnov",
+    author_email="bazarnov@me.com",
     packages=find_packages(),
     install_requires=MAIN_REQUIREMENTS,
 )
